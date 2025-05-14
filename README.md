@@ -79,15 +79,7 @@ data/
 使用以下命令训练模型并生成用户嵌入向量：
 
 ```bash
-python -m ubt_solution.create_embeddings \
-    --data-dir /path/to/data \
-    --embeddings-dir /path/to/embeddings \
-    --accelerator gpu \
-    --devices 0 \
-    --num-workers 4 \
-    --batch-size 128 \
-    --num-epochs 10 \
-    --learning-rate 1e-4
+nohup bash run.sh & disown
 ```
 
 ### 3. 参数说明
