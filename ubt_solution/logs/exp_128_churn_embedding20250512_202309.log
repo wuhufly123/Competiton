@@ -1,0 +1,160 @@
+INFO:__main__:Using custom task weights: {'churn': 1.0, 'category_propensity': 0.0, 'product_propensity': 0.0}
+INFO:ubt_solution.config:Using CUDA version: 11.8
+INFO:ubt_solution.data_processor:内存使用情况 [初始化数据集开始] - RSS: 547.33 MB, VMS: 23750.69 MB
+INFO:ubt_solution.data_processor:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processor:测试模式：只处理前 10000 个用户
+INFO:ubt_solution.data_processor:系统可用内存: 337.17 GB
+INFO:ubt_solution.data_processor:根据系统内存自动设置块大小为: 20000
+INFO:ubt_solution.data_processor:将用户分成 1 个块进行处理，每块大约 20000 个用户
+INFO:ubt_solution.data_processor:内存使用情况 [开始分块加载事件数据] - RSS: 555.14 MB, VMS: 23758.32 MB
+INFO:ubt_solution.data_processor:处理用户块 1/1
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (44985, 4)
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (39490, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (87008, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (156434, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (1213783, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 事件数据加载完成] - RSS: 1309.50 MB, VMS: 26674.23 MB
+INFO:ubt_solution.data_processor:开始加载商品属性数据...
+INFO:ubt_solution.data_processor:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processor:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processor:商品属性数据加载完成
+INFO:ubt_solution.data_processor:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 1529.06 MB, VMS: 26849.08 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_479641934112442117.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 10000 个用户序列
+INFO:ubt_solution.data_processor:块 1 处理完成，耗时: 92.66 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 处理完成] - RSS: 1745.47 MB, VMS: 27057.08 MB
+INFO:ubt_solution.data_processor:用户序列构建完成，共 10000 个用户
+INFO:ubt_solution.data_processor:创建商品属性查找字典...
+INFO:ubt_solution.data_processor:商品属性字典创建完成，包含 1197634 个商品
+INFO:ubt_solution.data_processor:设置样本缓存大小为 5000
+INFO:ubt_solution.data_processor:内存使用情况 [数据集初始化完成] - RSS: 2109.77 MB, VMS: 27410.04 MB
+INFO:ubt_solution.data_processor:内存使用情况 [初始化数据集开始] - RSS: 2109.77 MB, VMS: 27410.04 MB
+INFO:ubt_solution.data_processor:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processor:测试模式：只处理前 10000 个用户
+INFO:ubt_solution.data_processor:系统可用内存: 335.62 GB
+INFO:ubt_solution.data_processor:根据系统内存自动设置块大小为: 20000
+INFO:ubt_solution.data_processor:将用户分成 1 个块进行处理，每块大约 20000 个用户
+INFO:ubt_solution.data_processor:内存使用情况 [开始分块加载事件数据] - RSS: 2117.25 MB, VMS: 27417.66 MB
+INFO:ubt_solution.data_processor:处理用户块 1/1
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (39490, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (44985, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (87008, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (156434, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (1213783, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 事件数据加载完成] - RSS: 2285.62 MB, VMS: 28050.70 MB
+INFO:ubt_solution.data_processor:开始加载商品属性数据...
+INFO:ubt_solution.data_processor:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processor:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processor:商品属性数据加载完成
+INFO:ubt_solution.data_processor:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 2509.15 MB, VMS: 28240.36 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_479641934112442117.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 10000 个用户序列
+INFO:ubt_solution.data_processor:块 1 处理完成，耗时: 92.26 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 处理完成] - RSS: 2725.48 MB, VMS: 28449.36 MB
+INFO:ubt_solution.data_processor:用户序列构建完成，共 10000 个用户
+INFO:ubt_solution.data_processor:创建商品属性查找字典...
+INFO:ubt_solution.data_processor:商品属性字典创建完成，包含 1197634 个商品
+INFO:ubt_solution.data_processor:设置样本缓存大小为 5000
+INFO:ubt_solution.data_processor:内存使用情况 [数据集初始化完成] - RSS: 3136.64 MB, VMS: 28829.67 MB
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:开始训练模型...
+INFO:ubt_solution.trainer:Epoch 1/1
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 21.78%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.59%
+INFO:ubt_solution.model:品类倾向性: 446/2048 样本有标签 (21.78%)
+INFO:ubt_solution.model:产品倾向性: 53/2048 样本有标签 (2.59%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+INFO:ubt_solution.trainer:loss: 0.6929904818534851
+Training:  20%|██        | 1/5 [00:22<01:31, 22.88s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.model:品类倾向性: 429/2048 样本有标签 (20.95%)
+INFO:ubt_solution.model:产品倾向性: 53/2048 样本有标签 (2.59%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+INFO:ubt_solution.trainer:loss: 0.6927415132522583
+Training:  40%|████      | 2/5 [00:33<00:47, 15.91s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.model:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.model:产品倾向性: 59/2048 样本有标签 (2.88%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+INFO:ubt_solution.trainer:loss: 0.692490816116333
+Training:  60%|██████    | 3/5 [00:46<00:28, 14.41s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.model:品类倾向性: 473/2048 样本有标签 (23.10%)
+INFO:ubt_solution.model:产品倾向性: 50/2048 样本有标签 (2.44%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+INFO:ubt_solution.trainer:loss: 0.692462682723999
+Training:  80%|████████  | 4/5 [00:57<00:12, 12.97s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.model:品类倾向性: 385/1808 样本有标签 (21.29%)
+INFO:ubt_solution.model:产品倾向性: 49/1808 样本有标签 (2.71%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+INFO:ubt_solution.trainer:loss: 0.6917629837989807
+Training: 100%|██████████| 5/5 [01:06<00:00, 11.44s/it]Training: 100%|██████████| 5/5 [01:06<00:00, 13.23s/it]
+INFO:ubt_solution.trainer:total_loss: 6925.07136631012, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.6925
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 0.0000
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.0000
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.0000
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.model:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.model:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Validation:  20%|██        | 1/5 [00:17<01:09, 17.42s/it]INFO:ubt_solution.model:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.model:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Validation:  40%|████      | 2/5 [00:20<00:26,  8.71s/it]INFO:ubt_solution.model:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.model:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Validation:  60%|██████    | 3/5 [00:22<00:11,  5.64s/it]INFO:ubt_solution.model:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.model:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Validation:  80%|████████  | 4/5 [00:23<00:03,  3.99s/it]INFO:ubt_solution.model:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.model:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Validation: 100%|██████████| 5/5 [00:24<00:00,  3.02s/it]Validation: 100%|██████████| 5/5 [00:24<00:00,  4.99s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 0.0000
+INFO:ubt_solution.trainer:category_propensity_loss improved: 0.0000
+INFO:ubt_solution.trainer:product_propensity_loss improved: 0.0000
+INFO:ubt_solution.trainer:New best churn_auc: 0.6542
+INFO:ubt_solution.trainer:New best category_propensity_accuracy: 0.4966
+INFO:ubt_solution.trainer:New best product_propensity_accuracy: 0.4914
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.6909
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.6909105899810791, 'churn_loss': 0.0, 'category_propensity_loss': 0.0, 'product_propensity_loss': 0.0, 'churn_auc': 0.6541597843170166, 'category_propensity_accuracy': 0.49655380845069885, 'category_propensity_pos_accuracy': 0.49655380845069885, 'product_propensity_accuracy': 0.4914015233516693, 'product_propensity_pos_accuracy': 0.4914015233516693}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:__main__:生成用户嵌入向量...
+Generating embeddings:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.model:品类倾向性: 432/2048 样本有标签 (21.09%)
+INFO:ubt_solution.model:产品倾向性: 58/2048 样本有标签 (2.83%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Generating embeddings:  20%|██        | 1/5 [00:17<01:11, 17.78s/it]INFO:ubt_solution.model:品类倾向性: 463/2048 样本有标签 (22.61%)
+INFO:ubt_solution.model:产品倾向性: 54/2048 样本有标签 (2.64%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Generating embeddings:  40%|████      | 2/5 [00:19<00:25,  8.54s/it]INFO:ubt_solution.model:品类倾向性: 424/2048 样本有标签 (20.70%)
+INFO:ubt_solution.model:产品倾向性: 48/2048 样本有标签 (2.34%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Generating embeddings:  60%|██████    | 3/5 [00:23<00:12,  6.25s/it]INFO:ubt_solution.model:品类倾向性: 451/2048 样本有标签 (22.02%)
+INFO:ubt_solution.model:产品倾向性: 61/2048 样本有标签 (2.98%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Generating embeddings:  80%|████████  | 4/5 [00:26<00:05,  5.09s/it]INFO:ubt_solution.model:品类倾向性: 386/1808 样本有标签 (21.35%)
+INFO:ubt_solution.model:产品倾向性: 43/1808 样本有标签 (2.38%)
+INFO:ubt_solution.model:1.0,0.0,0.0
+Generating embeddings: 100%|██████████| 5/5 [01:02<00:00, 16.18s/it]Generating embeddings: 100%|██████████| 5/5 [01:05<00:00, 13.09s/it]
+INFO:__main__:Saving embeddings
+INFO:__main__:完成！

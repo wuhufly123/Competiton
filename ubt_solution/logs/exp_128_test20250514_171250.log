@@ -1,0 +1,454 @@
+INFO:__main__:Using custom task weights: {'churn': 1.0, 'category_propensity': 0.0, 'product_propensity': 0.0}
+INFO:ubt_solution.config:Using CUDA version: 11.8
+INFO:ubt_solution.data_processor:内存使用情况 [初始化数据集开始] - RSS: 545.29 MB, VMS: 23751.66 MB
+INFO:ubt_solution.data_processor:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processor:测试模式：只处理前 10000 个用户
+INFO:ubt_solution.data_processor:系统可用内存: 304.66 GB
+INFO:ubt_solution.data_processor:根据系统内存自动设置块大小为: 20000
+INFO:ubt_solution.data_processor:将用户分成 1 个块进行处理，每块大约 20000 个用户
+INFO:ubt_solution.data_processor:内存使用情况 [开始分块加载事件数据] - RSS: 552.85 MB, VMS: 23759.30 MB
+INFO:ubt_solution.data_processor:处理用户块 1/1
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (44985, 4)
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (39490, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (87008, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (156434, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (1213783, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 事件数据加载完成] - RSS: 1230.37 MB, VMS: 26602.26 MB
+INFO:ubt_solution.data_processor:开始加载商品属性数据...
+INFO:ubt_solution.data_processor:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processor:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processor:商品属性数据加载完成
+INFO:ubt_solution.data_processor:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 1463.36 MB, VMS: 26777.11 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_479641934112442117.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 10000 个用户序列
+INFO:ubt_solution.data_processor:块 1 处理完成，耗时: 127.11 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 处理完成] - RSS: 1679.73 MB, VMS: 26989.11 MB
+INFO:ubt_solution.data_processor:用户序列构建完成，共 10000 个用户
+INFO:ubt_solution.data_processor:创建商品属性查找字典...
+INFO:ubt_solution.data_processor:商品属性字典创建完成，包含 1197634 个商品
+INFO:ubt_solution.data_processor:设置样本缓存大小为 5000
+INFO:ubt_solution.data_processor:内存使用情况 [数据集初始化完成] - RSS: 2041.91 MB, VMS: 27342.76 MB
+INFO:ubt_solution.data_processor:内存使用情况 [初始化数据集开始] - RSS: 2041.91 MB, VMS: 27342.76 MB
+INFO:ubt_solution.data_processor:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processor:测试模式：只处理前 10000 个用户
+INFO:ubt_solution.data_processor:系统可用内存: 319.67 GB
+INFO:ubt_solution.data_processor:根据系统内存自动设置块大小为: 20000
+INFO:ubt_solution.data_processor:将用户分成 1 个块进行处理，每块大约 20000 个用户
+INFO:ubt_solution.data_processor:内存使用情况 [开始分块加载事件数据] - RSS: 2049.25 MB, VMS: 27350.39 MB
+INFO:ubt_solution.data_processor:处理用户块 1/1
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (39490, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (44985, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (87008, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (156434, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (1213783, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 事件数据加载完成] - RSS: 2315.09 MB, VMS: 28049.43 MB
+INFO:ubt_solution.data_processor:开始加载商品属性数据...
+INFO:ubt_solution.data_processor:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processor:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processor:商品属性数据加载完成
+INFO:ubt_solution.data_processor:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 2503.24 MB, VMS: 28239.22 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_479641934112442117.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 10000 个用户序列
+INFO:ubt_solution.data_processor:块 1 处理完成，耗时: 129.85 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 处理完成] - RSS: 2719.57 MB, VMS: 28447.22 MB
+INFO:ubt_solution.data_processor:用户序列构建完成，共 10000 个用户
+INFO:ubt_solution.data_processor:创建商品属性查找字典...
+INFO:ubt_solution.data_processor:商品属性字典创建完成，包含 1197634 个商品
+INFO:ubt_solution.data_processor:设置样本缓存大小为 5000
+INFO:ubt_solution.data_processor:内存使用情况 [数据集初始化完成] - RSS: 3143.12 MB, VMS: 28827.65 MB
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:开始训练模型...
+INFO:ubt_solution.trainer:Epoch 1/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 20.51%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.39%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 420/2048 样本有标签 (20.51%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 49/2048 样本有标签 (2.39%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.22465041279792786
+Training:  20%|██        | 1/5 [01:02<04:11, 62.80s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 431/2048 样本有标签 (21.04%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.22259116172790527
+Training:  40%|████      | 2/5 [01:35<02:15, 45.03s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 468/2048 样本有标签 (22.85%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 56/2048 样本有标签 (2.73%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21739506721496582
+Training:  60%|██████    | 3/5 [02:00<01:11, 35.82s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 439/2048 样本有标签 (21.44%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 47/2048 样本有标签 (2.29%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.22186584770679474
+Training:  80%|████████  | 4/5 [02:20<00:29, 29.68s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 398/1808 样本有标签 (22.01%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 57/1808 样本有标签 (3.15%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.22022998332977295
+Training: 100%|██████████| 5/5 [02:31<00:00, 22.81s/it]Training: 100%|██████████| 5/5 [02:31<00:00, 30.28s/it]
+INFO:ubt_solution.trainer:total_loss: 2213.7329082489014, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2214
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.2137
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6927
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:36<02:27, 36.78s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [00:41<00:54, 18.04s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [00:44<00:22, 11.09s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [00:46<00:07,  7.60s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:06<00:00, 11.95s/it]Validation: 100%|██████████| 5/5 [01:06<00:00, 13.37s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.1794
+INFO:ubt_solution.trainer:category_propensity_loss improved: 0.6931
+INFO:ubt_solution.trainer:product_propensity_loss improved: 0.6927
+INFO:ubt_solution.trainer:New best churn_auc: 0.4571
+INFO:ubt_solution.trainer:New best category_propensity_accuracy: 0.5241
+INFO:ubt_solution.trainer:New best product_propensity_accuracy: 0.6034
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2179
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.21794033570289612, 'churn_loss': 2.179403321838379, 'category_propensity_loss': 0.6930784364700318, 'product_propensity_loss': 0.6926504953384399, 'churn_auc': 0.45714104175567627, 'category_propensity_accuracy': 0.5240630507469177, 'category_propensity_pos_accuracy': 0.5240630507469177, 'product_propensity_accuracy': 0.6034469604492188, 'product_propensity_pos_accuracy': 0.6034469604492188}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:ubt_solution.trainer:Epoch 2/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 22.36%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.39%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 458/2048 样本有标签 (22.36%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 49/2048 样本有标签 (2.39%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21629391610622406
+Training:  20%|██        | 1/5 [00:52<03:29, 52.48s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 417/2048 样本有标签 (20.36%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 59/2048 样本有标签 (2.88%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.22370973229408264
+Training:  40%|████      | 2/5 [01:10<01:37, 32.38s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 441/2048 样本有标签 (21.53%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 47/2048 样本有标签 (2.29%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21966247260570526
+Training:  60%|██████    | 3/5 [01:32<00:55, 27.56s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 452/2048 样本有标签 (22.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 58/2048 样本有标签 (2.83%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21418367326259613
+Training:  80%|████████  | 4/5 [01:54<00:25, 25.25s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 388/1808 样本有标签 (21.46%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 51/1808 样本有标签 (2.82%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21936090290546417
+Training: 100%|██████████| 5/5 [02:12<00:00, 22.76s/it]Training: 100%|██████████| 5/5 [02:12<00:00, 26.59s/it]
+INFO:ubt_solution.trainer:total_loss: 2186.2488911151886, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2186
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.1862
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6928
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:50<03:23, 50.85s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [01:11<01:39, 33.27s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [01:22<00:46, 23.00s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [01:34<00:18, 18.64s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:36<00:00, 12.58s/it]Validation: 100%|██████████| 5/5 [01:36<00:00, 19.33s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.1502
+INFO:ubt_solution.trainer:category_propensity_loss no improvement for 1 epochs
+INFO:ubt_solution.trainer:product_propensity_loss no improvement for 1 epochs
+INFO:ubt_solution.trainer:New best category_propensity_accuracy: 0.5301
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2150
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.21502236652374268, 'churn_loss': 2.150223677444458, 'category_propensity_loss': 0.6931810750961304, 'product_propensity_loss': 0.692856182384491, 'churn_auc': 0.42229652404785156, 'category_propensity_accuracy': 0.5300974249839783, 'category_propensity_pos_accuracy': 0.5300974249839783, 'product_propensity_accuracy': 0.5776515007019043, 'product_propensity_pos_accuracy': 0.5776515007019043}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:ubt_solution.trainer:Epoch 3/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 21.68%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.64%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 444/2048 样本有标签 (21.68%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 54/2048 样本有标签 (2.64%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21442671120166779
+Training:  20%|██        | 1/5 [00:40<02:42, 40.50s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 464/2048 样本有标签 (22.66%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 54/2048 样本有标签 (2.64%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2142714112997055
+Training:  40%|████      | 2/5 [00:59<01:23, 27.95s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 434/2048 样本有标签 (21.19%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 52/2048 样本有标签 (2.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21800146996974945
+Training:  60%|██████    | 3/5 [01:28<00:56, 28.23s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 441/2048 样本有标签 (21.53%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 50/2048 样本有标签 (2.44%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21575012803077698
+Training:  80%|████████  | 4/5 [01:56<00:28, 28.38s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 373/1808 样本有标签 (20.63%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 54/1808 样本有标签 (2.99%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2187214344739914
+Training: 100%|██████████| 5/5 [02:22<00:00, 27.34s/it]Training: 100%|██████████| 5/5 [02:22<00:00, 28.52s/it]
+INFO:ubt_solution.trainer:total_loss: 2161.745381116867, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2162
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.1617
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6929
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:45<03:02, 45.51s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [00:59<01:20, 26.96s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [01:02<00:31, 15.90s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [01:04<00:10, 10.41s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:06<00:00,  7.31s/it]Validation: 100%|██████████| 5/5 [01:06<00:00, 13.26s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.1248
+INFO:ubt_solution.trainer:category_propensity_loss no improvement for 2 epochs
+INFO:ubt_solution.trainer:product_propensity_loss no improvement for 2 epochs
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2125
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.21247747921943663, 'churn_loss': 2.1247747509002686, 'category_propensity_loss': 0.6932248074531555, 'product_propensity_loss': 0.6929729673385621, 'churn_auc': 0.42582643032073975, 'category_propensity_accuracy': 0.516447126865387, 'category_propensity_pos_accuracy': 0.516447126865387, 'product_propensity_accuracy': 0.5550378561019897, 'product_propensity_pos_accuracy': 0.5550378561019897}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:ubt_solution.trainer:Epoch 4/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 20.41%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.78%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 418/2048 样本有标签 (20.41%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 57/2048 样本有标签 (2.78%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21593861281871796
+Training:  20%|██        | 1/5 [00:54<03:36, 54.17s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 411/2048 样本有标签 (20.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 58/2048 样本有标签 (2.83%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21869516372680664
+Training:  40%|████      | 2/5 [01:20<01:53, 37.74s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 466/2048 样本有标签 (22.75%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 50/2048 样本有标签 (2.44%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2142692655324936
+Training:  60%|██████    | 3/5 [01:45<01:03, 31.91s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 462/2048 样本有标签 (22.56%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 52/2048 样本有标签 (2.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21262860298156738
+Training:  80%|████████  | 4/5 [01:59<00:24, 24.83s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 399/1808 样本有标签 (22.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 47/1808 样本有标签 (2.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.20767556130886078
+Training: 100%|██████████| 5/5 [02:18<00:00, 22.67s/it]Training: 100%|██████████| 5/5 [02:18<00:00, 27.69s/it]
+INFO:ubt_solution.trainer:total_loss: 2139.8942239284515, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2140
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.1399
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6930
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:50<03:20, 50.08s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [01:10<01:37, 32.66s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [01:26<00:50, 25.07s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [01:34<00:18, 18.21s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:46<00:00, 16.23s/it]Validation: 100%|██████████| 5/5 [01:47<00:00, 21.45s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.0998
+INFO:ubt_solution.trainer:category_propensity_loss no improvement for 3 epochs
+INFO:ubt_solution.trainer:product_propensity_loss no improvement for 3 epochs
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2100
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.20997989246845244, 'churn_loss': 2.099798876571655, 'category_propensity_loss': 0.6932166933059692, 'product_propensity_loss': 0.6930585742950439, 'churn_auc': 0.44844263792037964, 'category_propensity_accuracy': 0.5053849816322327, 'category_propensity_pos_accuracy': 0.5053849816322327, 'product_propensity_accuracy': 0.5450378656387329, 'product_propensity_pos_accuracy': 0.5450378656387329}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:ubt_solution.trainer:Epoch 5/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 20.80%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.59%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 426/2048 样本有标签 (20.80%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 53/2048 样本有标签 (2.59%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21449489891529083
+Training:  20%|██        | 1/5 [00:46<03:07, 46.80s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 420/2048 样本有标签 (20.51%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2147984504699707
+Training:  40%|████      | 2/5 [00:59<01:20, 26.79s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 452/2048 样本有标签 (22.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 40/2048 样本有标签 (1.95%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2099616527557373
+Training:  60%|██████    | 3/5 [01:21<00:49, 24.55s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 453/2048 样本有标签 (22.12%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 63/2048 样本有标签 (3.08%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2123890370130539
+Training:  80%|████████  | 4/5 [01:50<00:26, 26.26s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 405/1808 样本有标签 (22.40%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 53/1808 样本有标签 (2.93%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2065669596195221
+Training: 100%|██████████| 5/5 [02:14<00:00, 25.63s/it]Training: 100%|██████████| 5/5 [02:15<00:00, 27.03s/it]
+INFO:ubt_solution.trainer:total_loss: 2117.640055179596, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2118
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.1176
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6931
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:33<02:15, 33.82s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [00:37<00:48, 16.09s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [00:46<00:26, 13.04s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [00:54<00:10, 11.00s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:01<00:00,  9.55s/it]Validation: 100%|██████████| 5/5 [01:01<00:00, 12.40s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.0749
+INFO:ubt_solution.trainer:category_propensity_loss no improvement for 4 epochs
+INFO:ubt_solution.trainer:product_propensity_loss no improvement for 4 epochs
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2075
+INFO:ubt_solution.trainer:Validation metrics: {'val_loss': 0.20749300382137298, 'churn_loss': 2.0749299854278562, 'category_propensity_loss': 0.6931838557243347, 'product_propensity_loss': 0.6931212918281555, 'churn_auc': 0.45124173164367676, 'category_propensity_accuracy': 0.5266419053077698, 'category_propensity_pos_accuracy': 0.5266419053077698, 'product_propensity_accuracy': 0.5114393830299377, 'product_propensity_pos_accuracy': 0.5114393830299377}
+INFO:ubt_solution.trainer:category_propensity 标签比例: 当前=21.56%, 平均=21.56%
+INFO:ubt_solution.trainer:product_propensity 标签比例: 当前=2.64%, 平均=2.64%
+INFO:ubt_solution.trainer:Epoch 6/20
+Training:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.trainer:Batch 0: 开始训练
+INFO:ubt_solution.trainer:Batch 0: 品类倾向性标签比例 = 21.68%
+INFO:ubt_solution.trainer:Batch 0: 产品倾向性标签比例 = 2.73%
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 444/2048 样本有标签 (21.68%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 56/2048 样本有标签 (2.73%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2107231616973877
+Training:  20%|██        | 1/5 [00:54<03:36, 54.09s/it]INFO:ubt_solution.trainer:Batch 1: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 434/2048 样本有标签 (21.19%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 50/2048 样本有标签 (2.44%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.20724157989025116
+Training:  40%|████      | 2/5 [01:22<01:56, 38.76s/it]INFO:ubt_solution.trainer:Batch 2: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 466/2048 样本有标签 (22.75%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 59/2048 样本有标签 (2.88%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.20849394798278809
+Training:  60%|██████    | 3/5 [01:51<01:08, 34.42s/it]INFO:ubt_solution.trainer:Batch 3: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 424/2048 样本有标签 (20.70%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 53/2048 样本有标签 (2.59%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.2098621428012848
+Training:  80%|████████  | 4/5 [02:19<00:31, 31.90s/it]INFO:ubt_solution.trainer:Batch 4: 开始训练
+INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 388/1808 样本有标签 (21.46%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 46/1808 样本有标签 (2.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+INFO:ubt_solution.trainer:loss: 0.21173560619354248
+Training: 100%|██████████| 5/5 [02:30<00:00, 24.45s/it]Training: 100%|██████████| 5/5 [02:30<00:00, 30.18s/it]
+INFO:ubt_solution.trainer:total_loss: 2095.6030406951904, total_samples: 10000
+INFO:ubt_solution.trainer:Epoch average loss: 0.2096
+INFO:ubt_solution.trainer:训练集 category_propensity 标签比例: 21.56%
+INFO:ubt_solution.trainer:训练集 product_propensity 标签比例: 2.64%
+INFO:ubt_solution.trainer:Epoch average churn_loss: 2.0956
+INFO:ubt_solution.trainer:Epoch average category_propensity_loss: 0.6932
+INFO:ubt_solution.trainer:Epoch average product_propensity_loss: 0.6931
+Validation:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 580/2048 样本有标签 (28.32%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 72/2048 样本有标签 (3.52%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  20%|██        | 1/5 [00:33<02:15, 33.89s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 605/2048 样本有标签 (29.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 80/2048 样本有标签 (3.91%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  40%|████      | 2/5 [00:42<00:57, 19.11s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 423/2048 样本有标签 (20.65%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 55/2048 样本有标签 (2.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  60%|██████    | 3/5 [01:00<00:37, 18.51s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 284/2048 样本有标签 (13.87%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 22/2048 样本有标签 (1.07%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation:  80%|████████  | 4/5 [01:08<00:14, 14.24s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 264/1808 样本有标签 (14.60%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 35/1808 样本有标签 (1.94%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Validation: 100%|██████████| 5/5 [01:21<00:00, 13.99s/it]Validation: 100%|██████████| 5/5 [01:21<00:00, 16.39s/it]
+INFO:ubt_solution.trainer:churn_loss improved: 2.0503
+INFO:ubt_solution.trainer:category_propensity_loss no improvement for 5 epochs
+INFO:ubt_solution.trainer:product_propensity_loss no improvement for 5 epochs
+INFO:ubt_solution.trainer:保存最佳模型，验证损失: 0.2050
+INFO:ubt_solution.trainer:品类和产品倾向性任务长时间没有改善，提前停止训练
+INFO:__main__:生成用户嵌入向量...
+Generating embeddings:   0%|          | 0/5 [00:00<?, ?it/s]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 445/2048 样本有标签 (21.73%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 52/2048 样本有标签 (2.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Generating embeddings:  20%|██        | 1/5 [00:29<01:56, 29.11s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 461/2048 样本有标签 (22.51%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 60/2048 样本有标签 (2.93%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Generating embeddings:  40%|████      | 2/5 [00:32<00:41, 13.72s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 410/2048 样本有标签 (20.02%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 45/2048 样本有标签 (2.20%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Generating embeddings:  60%|██████    | 3/5 [00:34<00:17,  8.78s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 466/2048 样本有标签 (22.75%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 61/2048 样本有标签 (2.98%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Generating embeddings:  80%|████████  | 4/5 [00:37<00:06,  6.45s/it]INFO:ubt_solution.models.universal_behavioral_transformer:品类倾向性: 374/1808 样本有标签 (20.69%)
+INFO:ubt_solution.models.universal_behavioral_transformer:产品倾向性: 46/1808 样本有标签 (2.54%)
+INFO:ubt_solution.models.universal_behavioral_transformer:固定任务权重: 流失=1.00, 品类=0.00, 产品=0.00
+Generating embeddings: 100%|██████████| 5/5 [00:58<00:00, 11.71s/it]Generating embeddings: 100%|██████████| 5/5 [00:59<00:00, 11.83s/it]
+INFO:__main__:Saving embeddings
+INFO:__main__:完成！

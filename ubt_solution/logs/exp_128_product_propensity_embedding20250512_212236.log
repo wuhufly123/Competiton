@@ -1,0 +1,124 @@
+INFO:__main__:Using custom task weights: {'churn': 0.0, 'category_propensity': 0.0, 'product_propensity': 1.0}
+INFO:ubt_solution.config:Using CUDA version: 11.8
+INFO:ubt_solution.data_processor:内存使用情况 [初始化数据集开始] - RSS: 547.91 MB, VMS: 23751.59 MB
+INFO:ubt_solution.data_processor:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processor:加载了 1000000 个相关用户
+INFO:ubt_solution.data_processor:系统可用内存: 301.45 GB
+INFO:ubt_solution.data_processor:根据系统内存自动设置块大小为: 100000
+INFO:ubt_solution.data_processor:将用户分成 10 个块进行处理，每块大约 100000 个用户
+INFO:ubt_solution.data_processor:内存使用情况 [开始分块加载事件数据] - RSS: 555.57 MB, VMS: 23759.36 MB
+INFO:ubt_solution.data_processor:处理用户块 1/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (271901, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (349314, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (609682, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (1067759, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (8802884, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 事件数据加载完成] - RSS: 2242.23 MB, VMS: 27448.57 MB
+INFO:ubt_solution.data_processor:开始加载商品属性数据...
+INFO:ubt_solution.data_processor:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processor:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processor:商品属性数据加载完成
+INFO:ubt_solution.data_processor:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 2417.71 MB, VMS: 27607.06 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_-9027661516056396895.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 100000 个用户序列
+INFO:ubt_solution.data_processor:块 1 处理完成，耗时: 169.59 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 1 处理完成] - RSS: 3661.75 MB, VMS: 28887.77 MB
+INFO:ubt_solution.data_processor:处理用户块 2/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (91143, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (204731, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (236686, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (360839, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (3919188, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 2 事件数据加载完成] - RSS: 3843.76 MB, VMS: 29350.82 MB
+INFO:ubt_solution.data_processor:开始构建用户块 2 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 3843.73 MB, VMS: 29334.81 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_5988604979074304074.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 100000 个用户序列
+INFO:ubt_solution.data_processor:块 2 处理完成，耗时: 154.33 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 2 处理完成] - RSS: 4694.04 MB, VMS: 30203.04 MB
+INFO:ubt_solution.data_processor:处理用户块 3/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (87182, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (202885, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (229696, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (354988, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (3878507, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 3 事件数据加载完成] - RSS: 4799.73 MB, VMS: 30573.05 MB
+INFO:ubt_solution.data_processor:开始构建用户块 3 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 4799.70 MB, VMS: 30565.05 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_-1644539922095374492.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 100000 个用户序列
+INFO:ubt_solution.data_processor:块 3 处理完成，耗时: 170.54 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 3 处理完成] - RSS: 5672.94 MB, VMS: 31411.48 MB
+INFO:ubt_solution.data_processor:处理用户块 4/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (91330, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (206189, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (234780, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (358635, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (3916444, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 4 事件数据加载完成] - RSS: 5751.41 MB, VMS: 31501.49 MB
+INFO:ubt_solution.data_processor:开始构建用户块 4 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 5751.41 MB, VMS: 31501.49 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_6866083263702256308.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 100000 个用户序列
+INFO:ubt_solution.data_processor:块 4 处理完成，耗时: 159.27 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 4 处理完成] - RSS: 6660.81 MB, VMS: 32373.11 MB
+INFO:ubt_solution.data_processor:处理用户块 5/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (132284, 4)
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (93123, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (256393, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (369614, 5)
+INFO:ubt_solution.data_processor:page_visit 数据加载完成，形状: (3950290, 4)
+INFO:ubt_solution.data_processor:内存使用情况 [块 5 事件数据加载完成] - RSS: 6873.53 MB, VMS: 32924.39 MB
+INFO:ubt_solution.data_processor:开始构建用户块 5 的序列...
+INFO:ubt_solution.data_processor:开始构建用户序列...
+INFO:ubt_solution.data_processor:内存使用情况 [开始构建用户序列] - RSS: 6872.50 MB, VMS: 32907.39 MB
+INFO:ubt_solution.data_processor:找到缓存文件 /data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/cache/user_sequences_6743828170558511818.pkl，尝试加载...
+INFO:ubt_solution.data_processor:成功从缓存加载 100000 个用户序列
+INFO:ubt_solution.data_processor:块 5 处理完成，耗时: 162.15 秒
+INFO:ubt_solution.data_processor:内存使用情况 [块 5 处理完成] - RSS: 7790.48 MB, VMS: 33826.15 MB
+INFO:ubt_solution.data_processor:处理用户块 6/10
+INFO:ubt_solution.data_processor:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processor:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processor:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processor:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processor:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processor:remove_from_cart 数据加载完成，形状: (65986, 4)
+INFO:ubt_solution.data_processor:product_buy 数据加载完成，形状: (25014, 4)
+INFO:ubt_solution.data_processor:add_to_cart 数据加载完成，形状: (235606, 4)
+INFO:ubt_solution.data_processor:search_query 数据加载完成，形状: (276345, 5)

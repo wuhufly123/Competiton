@@ -1,0 +1,58 @@
+INFO:__main__:Using custom task weights: {'churn': 1.0, 'category_propensity': 0.0, 'product_propensity': 0.0}
+INFO:ubt_solution.config:Using CUDA version: 11.8
+INFO:ubt_solution.data_processing.memory_utils:内存使用情况 [初始化数据集开始] - RSS: 545.75 MB, VMS: 23751.61 MB
+INFO:ubt_solution.data_processing.dataset:正在加载相关用户ID，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/input/relevant_clients.npy
+INFO:ubt_solution.data_processing.dataset:测试模式：只处理前 10000 个用户
+INFO:ubt_solution.data_processing.dataset:系统可用内存: 337.02 GB
+INFO:ubt_solution.data_processing.dataset:根据系统内存自动设置块大小为: 20000
+INFO:ubt_solution.data_processing.dataset:将用户分成 1 个块进行处理，每块大约 20000 个用户
+INFO:ubt_solution.data_processing.memory_utils:内存使用情况 [开始分块加载事件数据] - RSS: 553.26 MB, VMS: 23759.25 MB
+INFO:ubt_solution.data_processing.dataset:处理用户块 1/1
+INFO:ubt_solution.data_processing.dataset:开始并行加载当前块的事件数据...
+INFO:ubt_solution.data_processing.utils:正在加载 product_buy 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_buy.parquet
+INFO:ubt_solution.data_processing.utils:正在加载 add_to_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/add_to_cart.parquet
+INFO:ubt_solution.data_processing.utils:正在加载 remove_from_cart 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/remove_from_cart.parquet
+INFO:ubt_solution.data_processing.utils:正在加载 page_visit 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/page_visit.parquet
+INFO:ubt_solution.data_processing.utils:正在加载 search_query 数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/search_query.parquet
+INFO:ubt_solution.data_processing.utils:remove_from_cart 数据加载完成，形状: (39490, 4)
+INFO:ubt_solution.data_processing.utils:product_buy 数据加载完成，形状: (44985, 4)
+INFO:ubt_solution.data_processing.utils:add_to_cart 数据加载完成，形状: (87008, 4)
+INFO:ubt_solution.data_processing.utils:search_query 数据加载完成，形状: (156434, 5)
+INFO:ubt_solution.data_processing.utils:page_visit 数据加载完成，形状: (1213783, 4)
+INFO:ubt_solution.data_processing.memory_utils:内存使用情况 [块 1 事件数据加载完成] - RSS: 1385.11 MB, VMS: 26412.12 MB
+INFO:ubt_solution.data_processing.dataset:开始加载商品属性数据...
+INFO:ubt_solution.data_processing.utils:正在加载商品属性数据，文件路径: /data/mhwang/Rec/RecSys/recsys2025/data/product_properties.parquet
+INFO:ubt_solution.data_processing.utils:商品属性数据加载完成，形状: (1197634, 4)
+INFO:ubt_solution.data_processing.dataset:商品属性数据加载完成
+INFO:ubt_solution.data_processing.dataset:开始构建用户块 1 的序列...
+INFO:ubt_solution.data_processing.dataset:开始构建用户序列...
+INFO:ubt_solution.data_processing.memory_utils:内存使用情况 [开始构建用户序列] - RSS: 1594.09 MB, VMS: 26584.96 MB
+INFO:ubt_solution.data_processing.dataset:合并事件数据...
+INFO:ubt_solution.data_processing.dataset:预计合并 1541700 行事件数据
+ERROR:ubt_solution.data_processing.dataset:合并事件数据时发生错误: name 'pd' is not defined
+Traceback (most recent call last):
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/data_processing/dataset.py", line 179, in _build_user_sequences
+    all_events = pd.concat(non_empty_events, ignore_index=True)
+                 ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/create_embeddings.py", line 147, in <module>
+    main()
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/create_embeddings.py", line 122, in main
+    train_loader, val_loader = create_data_loaders(data_dir, config, args.test_mode)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/data_processing/data_loader.py", line 13, in create_data_loaders
+    train_dataset = BehaviorSequenceDataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/data_processing/dataset.py", line 93, in __init__
+    chunk_sequences = self._build_user_sequences(chunk_events, user_chunk)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/mhwang/Rec/RecSys/recsys2025/ubt_solution/ubt_solution/data_processing/dataset.py", line 183, in _build_user_sequences
+    all_events = pd.DataFrame(columns=['client_id', 'timestamp', 'event_type', 'sku'])
+                 ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?

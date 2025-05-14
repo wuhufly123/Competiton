@@ -1,0 +1,14 @@
+INFO:__main__:Using custom task weights: {'churn': 1.0, 'category_propensity': 0.0, 'product_propensity': 0.0}
+INFO:ubt_solution.config:Using CUDA version: 11.8
+INFO:ubt_solution.data_utils.dataset:Creating data loaders...
+INFO:ubt_solution.data_utils.helpers:内存使用情况 [Dataset init start] - RSS: 545.85 MB, VMS: 23751.59 MB
+INFO:ubt_solution.data_utils.helpers:内存使用情况 [After loading product properties] - RSS: 1237.02 MB, VMS: 25781.91 MB
+INFO:ubt_solution.data_utils.target_data:Loaded train_target: 173646 rows, val_target: 193589 rows
+INFO:ubt_solution.data_utils.helpers:内存使用情况 [After initializing TargetData] - RSS: 1471.55 MB, VMS: 25914.35 MB
+INFO:ubt_solution.data_utils.dataset:Processing data for training
+INFO:ubt_solution.data_utils.dataset:Starting parallel event loading...
+INFO:ubt_solution.data_utils.dataset:Successfully loaded and processed product_buy: 1682296 rows
+INFO:ubt_solution.data_utils.dataset:Successfully loaded and processed remove_from_cart: 1697891 rows
+INFO:ubt_solution.data_utils.dataset:Successfully loaded and processed add_to_cart: 5235882 rows
+INFO:ubt_solution.data_utils.dataset:Successfully loaded and processed search_query: 9571258 rows
+INFO:ubt_solution.data_utils.dataset:Successfully loaded and processed page_visit: 150713186 rows
