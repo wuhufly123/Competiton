@@ -1,0 +1,154 @@
+WARNING:training_pipeline.logger_factory:No Neptune project is specified, loggin offline. To specify Neptune project, add command line argument --neptune-project workspace/project
+INFO:validator.utils:client ids loaded
+INFO:validator.utils:embeddings loaded
+WARNING:validator.embeddings_validator:Validator will not check if the content of client_ids.npy matches with the list of relevant clients. Embeddings may not conform to competition format.
+INFO:validator.utils:client ids are valid
+INFO:validator.utils:embeddings are valid
+INFO:validator.utils:embeddings and client ids have the same length
+INFO:validator.validate:Validator checks passed
+INFO:training_pipeline.train_runner:Running on churn
+INFO:training_pipeline.train_runner:Constructing task specific data structures
+INFO:training_pipeline.train_runner:Transforming client ids
+INFO:training_pipeline.train_runner:Setting up training logger
+INFO:training_pipeline.train_runner:Running training
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A800 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+['churn', 'propensity_category', 'propensity_sku']
+[<ChurnTasks.CHURN: 'churn'>, <PropensityTasks.PROPENSITY_CATEGORY: 'propensity_category'>, <PropensityTasks.PROPENSITY_SKU: 'propensity_sku'>]
+[neptune] [info   ] Neptune initialized. Open in the app: offline/af855289-35a5-440f-8b76-377e4de772b4
+INFO:training_pipeline.data_module:Constructing datasets
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /data/mhwang/Rec/RecSys/recsys2025/.neptune/offline-name/OFFLINE/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━┳━━━━━━┳━━━━━━━━┓
+┃   ┃ Name ┃ Type ┃ Params ┃
+┡━━━╇━━━━━━╇━━━━━━╇━━━━━━━━┩
+│ 0 │ net  │ Net  │ 50.6 M │
+└───┴──────┴──────┴────────┘
+Trainable params: 50.6 M                                                        
+Non-trainable params: 0                                                         
+Total params: 50.6 M                                                            
+Total estimated model params size (MB): 202                                     
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/pytorch_lightning/loops/fit_loop.py:298: The number of training batches (3966) is smaller than the logging interval Trainer(log_every_n_steps=5000). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Epoch 0/2  ━━━━━━━━━━━━━━━ 3966/3966 0:00:40 •       98.16it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.238
+                                                               val_loss: 0.321  
+                                                               val_auroc: 0.801 
+Epoch 1/2  ━━━━━━━━━━━━━━━ 3966/3966 0:00:42 •       97.07it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.242
+                                                               val_loss: 0.320  
+                                                               val_auroc: 0.802 
+`Trainer.fit` stopped: `max_epochs=3` reached.
+Epoch 2/2  ━━━━━━━━━━━━━━━ 3966/3966 0:00:44 •       90.01it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.242
+                                                               val_loss: 0.323  
+                                                               val_auroc: 0.798 
+[neptune] [info   ] Shutting down background jobs, please wait a moment...
+[neptune] [info   ] Done!
+INFO:training_pipeline.train_runner:Run on churn completed
+INFO:training_pipeline.train_runner:Running on propensity_category
+INFO:training_pipeline.train_runner:Constructing task specific data structures
+INFO:training_pipeline.train_runner:Transforming client ids
+INFO:training_pipeline.train_runner:Setting up training logger
+INFO:training_pipeline.train_runner:Running training
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[neptune] [info   ] Neptune initialized. Open in the app: offline/0fdc969e-5d45-4bb9-8036-154ae73cbc69
+INFO:training_pipeline.data_module:Constructing datasets
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /data/mhwang/Rec/RecSys/recsys2025/.neptune/offline-name/OFFLINE/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━┳━━━━━━┳━━━━━━━━┓
+┃   ┃ Name ┃ Type ┃ Params ┃
+┡━━━╇━━━━━━╇━━━━━━╇━━━━━━━━┩
+│ 0 │ net  │ Net  │ 50.8 M │
+└───┴──────┴──────┴────────┘
+Trainable params: 50.8 M                                                        
+Non-trainable params: 0                                                         
+Total params: 50.8 M                                                            
+Total estimated model params size (MB): 203                                     
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: No positive samples in targets, true positive value should be meaningless. Returning zero tensor in true positive score
+  warnings.warn(*args, **kwargs)  # noqa: B028
+Epoch 0/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:36 •       78.74it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.002  
+                                                               val_auroc: 0.898 
+                                                               val_diversity:   
+                                                               0.685            
+                                                               val_novelty:     
+                                                               0.942            
+Epoch 1/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:36 •       81.45it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.002  
+                                                               val_auroc: 0.898 
+                                                               val_diversity:   
+                                                               0.677            
+                                                               val_novelty:     
+                                                               0.886            
+`Trainer.fit` stopped: `max_epochs=3` reached.
+Epoch 2/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:34 •       82.91it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.002  
+                                                               val_auroc: 0.898 
+                                                               val_diversity:   
+                                                               0.807            
+                                                               val_novelty:     
+                                                               0.892            
+[neptune] [info   ] Shutting down background jobs, please wait a moment...
+[neptune] [info   ] Done!
+INFO:training_pipeline.train_runner:Run on propensity_category completed
+INFO:training_pipeline.train_runner:Running on propensity_sku
+INFO:training_pipeline.train_runner:Constructing task specific data structures
+INFO:training_pipeline.train_runner:Transforming client ids
+INFO:training_pipeline.train_runner:Setting up training logger
+INFO:training_pipeline.train_runner:Running training
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+[neptune] [info   ] Neptune initialized. Open in the app: offline/b2fd8542-1fbe-47f1-982e-591201311e59
+INFO:training_pipeline.data_module:Constructing datasets
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /data/mhwang/Rec/RecSys/recsys2025/.neptune/offline-name/OFFLINE/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+┏━━━┳━━━━━━┳━━━━━━┳━━━━━━━━┓
+┃   ┃ Name ┃ Type ┃ Params ┃
+┡━━━╇━━━━━━╇━━━━━━╇━━━━━━━━┩
+│ 0 │ net  │ Net  │ 50.8 M │
+└───┴──────┴──────┴────────┘
+Trainable params: 50.8 M                                                        
+Non-trainable params: 0                                                         
+Total params: 50.8 M                                                            
+Total estimated model params size (MB): 203                                     
+/data_sdc/mhwang/miniconda3/envs/RecSys/lib/python3.11/site-packages/torchmetrics/utilities/prints.py:43: UserWarning: No positive samples in targets, true positive value should be meaningless. Returning zero tensor in true positive score
+  warnings.warn(*args, **kwargs)  # noqa: B028
+Epoch 0/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:36 •       81.59it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.000  
+                                                               val_auroc: 0.881 
+                                                               val_diversity:   
+                                                               0.659            
+                                                               val_novelty:     
+                                                               0.992            
+Epoch 1/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:33 •       82.80it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.000  
+                                                               val_auroc: 0.889 
+                                                               val_diversity:   
+                                                               0.724            
+                                                               val_novelty:     
+                                                               0.994            
+`Trainer.fit` stopped: `max_epochs=3` reached.
+Epoch 2/2  ━━━━━━━━━━━━━━━ 7813/7813 0:01:34 •       83.46it/s v_num: LINE      
+                                     0:00:00                   train_loss: 0.000
+                                                               val_loss: 0.000  
+                                                               val_auroc: 0.889 
+                                                               val_diversity:   
+                                                               0.746            
+                                                               val_novelty:     
+                                                               0.994            
+[neptune] [info   ] Shutting down background jobs, please wait a moment...
+[neptune] [info   ] Done!
+INFO:training_pipeline.train_runner:Run on propensity_sku completed

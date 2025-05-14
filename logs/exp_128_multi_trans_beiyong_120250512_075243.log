@@ -1,0 +1,9 @@
+WARNING:training_pipeline.logger_factory:No Neptune project is specified, loggin offline. To specify Neptune project, add command line argument --neptune-project workspace/project
+INFO:validator.utils:client ids loaded
+INFO:validator.utils:embeddings loaded
+WARNING:validator.embeddings_validator:Validator will not check if the content of client_ids.npy matches with the list of relevant clients. Embeddings may not conform to competition format.
+INFO:validator.utils:client ids are valid
+ERROR:validator.validate:embeddings dtype should be float16 instead got float32
+ERROR:validator.validate:Validator checks fail
+['churn', 'propensity_category', 'propensity_sku']
+[<ChurnTasks.CHURN: 'churn'>, <PropensityTasks.PROPENSITY_CATEGORY: 'propensity_category'>, <PropensityTasks.PROPENSITY_SKU: 'propensity_sku'>]

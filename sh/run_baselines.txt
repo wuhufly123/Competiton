@@ -1,0 +1,6 @@
+python -m baseline.aggregated_features_baseline.create_embeddings --data-dir /data/mhwang/Rec/RecSys/recsys2025/data --embeddings-dir /data/mhwang/Rec/RecSys/recsys2025/submit_file/exp_128_multi_trans_beiyong
+
+
+nohup bash run_val.sh & disown
+
+nohup bash run.sh & disown

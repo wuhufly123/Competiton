@@ -1,0 +1,23 @@
+python -m data_utils.split_data --challenge-data-dir <your_challenge_data_dir>
+
+
+python -m data_utils.split_data --challenge-data-dir ./data
+
+
+Model training script
+Arguments
+
+--data-dir: Directory where competition target and input data are stored.
+--embeddings-dir: Directory where Universal Behavioral Profiles, which are used as model input embeddings are stored. Embeddings should be stored in the format described in the Competition Entry Format section.
+--tasks: List of tasks to evaluate the model on, possible values are: churn, propensity_category, propensity_sku.
+--log-name: Name for the experiment, used for logging.
+--num-workers: Number of subprocesses for data loading.
+--accelerator: Type of accelerator to use. Argument is directly passed to pl.LightningModule. Possible values include: gpu, cpu. For more options, see here .
+--devices: List of devices to use for training. Note that using auto when accelerator="gpu" sometimes produces undesired behavior, and may result in slower training time.
+--neptune-api-token (optional): API token for Neptune logger. If not specified, the results are logged offline.
+--neptune-project (optional): Name of Neptune project in the format <workspace>/<project> to log the results of the experiment to. If not specified, the results are logged offline.
+--disable-relevant-clients-check (optional): This flag disables the validation check that ensures the client_ids.npy file from the submission matches the contents of relevant_clients.npy. It allows training to be run on a different set of clients than the relevant clients.
+
+
+
+nohup python -m training_pipeline.train --data-dir /data/mhwang/Rec/RecSys/recsys2025/data --embeddings-dir /data/mhwang/Rec/RecSys/recsys2025/submit_file --tasks churn propensity_category propensity_sku --log-name baseline_exp --accelerator gpu --devices 0 --disable-relevant-clients-check
