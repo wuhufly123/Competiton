@@ -92,14 +92,7 @@ python -m ubt_solution.create_embeddings \
 
 ### 3. 参数说明
 
-- `--data-dir`：数据目录路径
-- `--embeddings-dir`：嵌入向量保存目录
-- `--accelerator`：使用的加速器类型（gpu/cpu）
-- `--devices`：使用的设备ID列表
-- `--num-workers`：数据加载的工作进程数
-- `--batch-size`：训练批次大小
-- `--num-epochs`：训练轮数
-- `--learning-rate`：学习率
+nohup bash run.sh & disown
 
 ### 4. 输出
 
