@@ -78,6 +78,7 @@ data/
 
 使用以下命令训练模型并生成用户嵌入向量：
 
+cd到ubt_solution路径中：
 ```bash
 nohup bash run.sh & disown
 ```
